@@ -9,7 +9,7 @@
     color: #ffffff;
     font-family: "Roboto";
     font-size: 35px;
-    font-weight: 700;
+    font-weight: 900 !important;
 }
 .bucket-container{
     display: flex;

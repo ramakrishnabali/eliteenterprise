@@ -39,8 +39,8 @@ const Header = ()=>(
      </div>
 
 
-    <div className="small-device-header">
-    <nav className="navbar bg-body-tertiary fixed-top">
+    {/* <div className=""> */}
+    <nav className="navbar bg-body-tertiary small-device-header">
       <div className="container-fluid">
         <div className="header-small">
           <input className="header-search" type="text" />
@@ -57,7 +57,7 @@ const Header = ()=>(
         <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
           <div className="offcanvas-header">
             {/* <h5 className="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5> */}
             <h1 className="header-heading">Elite Enterprise</h1>
@@ -119,7 +119,7 @@ const Header = ()=>(
         </div>
       </div>
     </nav>
-    </div>
+    {/* </div> */}
 </>
 )
 

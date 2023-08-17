@@ -83,7 +83,7 @@
     background-size: cover;
     width: 80%;
     border-radius: 15px;
-    height: 500px;
+    height: 630px;
     padding: 40px 70px;
     display: flex;
     justify-content: flex-end;
@@ -102,13 +102,13 @@
 }
 .location{
     background-color: #ffffff;
-    height:50%;
-    width: 40%;
-    padding: 25px;
+    height:75%;
+    width: 55%;
+    padding: 22px;
     border-radius: 20px;
 }
  
-@media screen and (max-width:768px) {
+@media (max-width:768px) {
     .location{
         width: 100%;
         padding: 20px;
@@ -154,6 +154,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 20px 0px 0px 0px;
 }
 @media screen and (max-width:768px) {
     .user-details-container{
@@ -184,7 +185,7 @@
     outline: none;
     border-radius: 15px;
     border: 1px solid #B8B8B8;
-    height: 40px;
+    height: 45px;
     margin: 17px 0px 8px 0px;
     padding: 10px;
     font-family: "Roboto";
@@ -197,7 +198,7 @@
 
 @media screen and (max-width:768px) {
     .user-input{
-        height: 25px;
+        height: 30px;
         margin: 13px 0px 8px 0px;
         border-radius: 10px;
     }

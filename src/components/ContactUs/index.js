@@ -22,7 +22,7 @@ const ContactUs = ()=>{
     <>
         <Header />
         <div className="about-top-container">
-            <h1>ContactUs</h1>
+            <h1>CONTACT</h1>
         </div>
         <div className="support-container">
             <div className="contact-details-container">
@@ -68,6 +68,7 @@ const ContactUs = ()=>{
                         </p>
                     </div>
             </div>
+
             <form className="message-form" onSubmit={formSubmit}>
                 <ul className="user-details-container">
                     <li className="user">
@@ -100,7 +101,8 @@ const ContactUs = ()=>{
             </form>
         </div>
         <Footer />
-    </>)
+    </>
+    )
 }
 
 export default ContactUs

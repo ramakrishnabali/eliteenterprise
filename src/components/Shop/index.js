@@ -18,7 +18,7 @@ const Shop =()=>(
             <Link to={`/shop/${1}`}  className="featured-product">
                 <li>
                     <p className="sale">Sale</p>
-                    <img src={ElleVireExcellenceWhippingCream2} alt="ElleVireExcellenceWhippingCream2" className="sale1"/>
+                    <img src={ElleVireExcellenceWhippingCream2} alt="ElleVireExcellenceWhippingCream2"/>
                     <h1 className="featured-product-heading">Caramel Crunchies Z6579</h1>
                     <hr className="hr-line"/>
                     <div className="cost-container">
