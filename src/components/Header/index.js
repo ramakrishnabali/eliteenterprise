@@ -16,12 +16,31 @@ const Header = ()=>(
             <Link to="/about"  className="header-links">
                 <p>About</p>
             </Link>
-            
-            <p className="header-links">Pages</p>
+            <div class="dropdown">
+              <p className="dropdown-toggle header-links" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Pages
+              </p>
+
+              <ul class="dropdown-menu drop">
+              <Link to="/team"  className="header-sub-links dropdown-item">
+                      <li>
+                        Team
+                      </li>
+                  </Link>
+                  <Link to="/blog" className="header-sub-links dropdown-item">
+                      <li>
+                        Blogs
+                      </li>
+                  </Link>
+              </ul>
+            </div>
+
+
+            {/* <p className=""></p> */}
             <Link to="/shop"  className="header-links">
                 <p className="header-links">Shop</p>
             </Link>
-            <p className="header-links">Brands</p>
+            {/* <p className="header-links">Brands</p> */}
             <Link to="/contactus"  className="header-links">
                 <p className="header-links">Support</p>
             </Link>
