@@ -2,14 +2,14 @@
     background-image: url(../../img/About/about.png);
     background-size: cover;
     height: 400px;
-    max-width: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #ffffff;
     font-family: "Roboto";
     font-size: 35px;
-    font-weight: 900 !important;
+    font-weight:800;
 }
 .bucket-container{
     display: flex;
@@ -24,6 +24,39 @@
 .bucket-sub-container{
     width: 550px;
 }
+@media (max-width:576px) {
+    .bucket-container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0px;
+    }
+    .bucketImg{
+        height: 150px;
+        width: 150px;
+    }
+    .bucket-sub-container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+}
+.creative-paragraph-bucket{
+    font-family: "Open Sans";
+    font-weight: 400;
+    font-size: 18px;
+    color: #525C60;
+    text-align: left;
+}
+@media (max-width:576px) {
+    .creative-paragraph-bucket{
+        text-align: center;
+    }
+}
+
+
 .bucket-heading{
     font-family: Roboto;
     font-size: 50px;
@@ -35,6 +68,11 @@
 }
 .why-choose-us-container{
     background-color: #F9F8F8;
+}
+@media (max-width:576px) {
+    .why-choose-us-container{
+        padding: 20px;
+    }
 }
 .why-choose-us-paragraph{
     font-family: "Open Sans";

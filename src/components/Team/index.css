@@ -40,6 +40,7 @@
     justify-content: center;
     align-items: flex-start;
     padding: 0px;
+    flex-wrap: wrap;
 }
 .personal-container{
     list-style-type: none;

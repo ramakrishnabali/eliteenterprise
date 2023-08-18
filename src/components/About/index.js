@@ -32,7 +32,7 @@ const About = ()=>(
             <div className="bucket-sub-container">
             <h3 className="about-us">About us</h3>
             <h1 className="bucket-heading">We do Creative <br />Things for Success</h1>
-            <p className="creative-paragraph">Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s,
+            <p className="creative-paragraph-bucket">Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s,
              when an unknown printer took a galley.Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.
                 Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.
                 Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.Simply dummy text of the printing and typesetting industry.

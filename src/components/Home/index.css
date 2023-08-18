@@ -73,23 +73,50 @@
     cursor: pointer;
 }
 .group-775{
-    height: 473px;
+    height: 373px;
     width: 100%;
-    margin-top: 15px;
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     /* padding: 13px; */
 }
+.group{
+    width: 50%;
+}
+@media (max-width:576px) {
+    .group{
+        width: 90%;
+    }
+}
 .about-us-container{
     display: flex;
     align-items: center;
-    height: 500px;
+    height: 100%;
     align-self: center;
+}
+@media (max-width:576px) {
+    .about-us-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.chocolate-image{
+    height: 200px;
+    margin: 0px;
 }
 .about-container{
     height: 100%;
     
+}
+@media (max-width:576px) {
+    .about-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
 }
 .about-us{
     color: #652700;
@@ -101,6 +128,13 @@
     font-family: "Roboto";
     margin-top: 10px;
     margin-bottom: 10px;
+}
+.creative-paragraph-about{
+    font-family: "Open Sans";
+    font-weight: 400;
+    font-size: 18px;
+    color: #525C60;
+    text-align: center;
 }
 .organic-food-heading{
     color: #7E1717;
@@ -137,14 +171,16 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    align-self: center;
     margin-top: 20px;
     /* padding-top: 20px; */
     /* padding-bottom: 20px; */
+    padding: 15px 0px 15px 0px;
 }
 .our-product-heading{
     color: #652700;
     width: 298px;
-    height: 59px;
+    text-align: center;
 }
 .featured-products-container{
     display: flex;
@@ -154,6 +190,7 @@
     padding: 0px;
     padding-top: 0px;
     width: 100%;
+    margin-top: 0px;
 }
 .featured-products-heading{
     width: 482px;
@@ -207,13 +244,19 @@
 
 .featured-product-heading{
     width: 234px;
-    height: 40px;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 25px;
     font-family: "Roboto";
     align-self: center;
     color:#274C5B;   
     margin-bottom: 0px;
+    text-transform: capitalize;
+}
+@media (max-width:576px) {
+    .featured-products-heading{
+        font-size: 20px;
+        margin-bottom: 0px;
+    }
 }
 .hr-line{
     color: #BFBFBF;
@@ -262,31 +305,62 @@
     width: 100%;
     background-color: #FFF3DA;
     height: 300px;
-    margin-top: 20px;
+    margin-top: 25px 0px 0px 0px;
+    padding: 0px 0px 10px 0px;
+}
+@media (max-width:576px) {
+    .brand-partner-container{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        margin-top: 15px 0px 0px 0px;
+        padding: 0px 0px 10px 0px;
+    }
 }
 .brands-container{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    /* display: flex;
+    align-items: center; */
+    /* justify-content: space-evenly; */ 
     width: 100%;
-    background-color: #FFF7EF;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    /* background-color: #FFF7EF;
+    padding-top: 15px; */
+    /* padding-bottom: 15px; */
+    margin-top: 0px;
 }
 .brand-image{
-    /* background-color: #F8F0E5; */
-    width: 200px;
-    height: 200px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 30px 0px 0px 0px;
+    margin: 30px 0px 0px 0px; */
 }
+.image-brand{
+    height: 70%;
+    width: 70%;
+    
+}
+.slider-container {
+    background-color: #B9B4C7;
+    color: black;
+    padding: 0px 30px 0px 30px;
+}
+/* .brand-image{
+    /* background-color: #F8F0E5; */
+    /* width: 200px;
+    height: 200px; */
+
 .our-policy{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     width: 100%;
     background-color: #D1D1D1;
-    height: 450px;
+    height: 100%;
     margin-top: 0px;
-    padding: 0px;
+    gap: 10px;
+    padding: 10px 0px 10px 0px;
 }
 .policy{
     list-style-type: none;
@@ -296,9 +370,10 @@
     align-items: center;
     background-color: #ffffff;
     border-radius: 15px;
-    height: 330px;
+    height: 100%;
     width: 250px;
     margin-right: 18px;
+    padding-top: 15px;
 }
 .policy-heading{
     font-size: 28px;

@@ -1,3 +1,8 @@
+import Slider from 'react-slick'
+
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+
 import "./index.css"
 
 import Header from "../Header"
@@ -21,9 +26,35 @@ import support from "../../img/Home/support.png"
 
 
 
-const Home = ()=>(
+const Home = ()=>{
+    const settings = {
+        dots: false,
+        slidesToShow: 4,
+        slidesToScroll: 2,
+        infinite: true,
+        responsive: [
+            {
+              breakpoint: 576,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: false
+              }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 1,
+                  infinite: true,
+                  dots: false
+                }
+              }
+        ]
+      }
+    return(
     <>
-
     <Header />
     <div className="home-container">
     <div className="top-container">
@@ -39,18 +70,18 @@ const Home = ()=>(
     </div>
 
     <div className="group-775" >
-        <img src={Group775} alt="group" />
+        <img src={Group775} alt="group" className="group" />
     </div>
 
     <div className="about-us-container">
-        <img src={chocolate1} alt="chocolate" />
+        <img src={chocolate1} alt="chocolate" className="chocolate-image" />
         <div className="about-container">
             <h3 className="about-us">About us</h3>
             <h1 className="about-us-heading">We Believe in working <br /> Accredited Farmers</h1>
-            <p className="creative-paragraph">Simply dummy text of the printing and typesetting industry.
+            <p className="creative-paragraph-about">Simply dummy text of the printing and typesetting industry.
             Lorem had ceased <br /> to been the industry's standard.</p>
             <h5 className="organic-food-heading">Organic Foods Only</h5>
-            <p className="creative-paragraph">Simply dummy text of the printing and typesetting industry.
+            <p className="creative-paragraph-about">Simply dummy text of the printing and typesetting industry.
             Lorem had ceased</p>
             <button type="button" className="about-us-button">Shop Now<span className="orange-arrow">{< HiArrowSmRight />}</span></button>
         </div>
@@ -247,13 +278,31 @@ const Home = ()=>(
     </div>
 
     <div className="brands-container">
-        <img className="left-arrow" src={LeftArrow} alt="left-arrow" />
-        <img className="brand-image" src={ELLEVIRE125x125} alt="ELLEVIRE125x125" />
-        <img className="brand-image" src={dawn125x125} alt="dawn125x125" />
-        <img className="brand-image" src={DIRA125x125} alt="DIRA125x125" />
-        <img className="brand-image" src={delta} alt="delta" />
-        <img className="brand-image" src={CELEBRE125x125} alt="CELEBRE125x125" />
-        <img className="right-arrow" src={RightArrow} alt="right-arrow" />
+            <div className="slider-container">
+            <Slider {...settings}>
+                <div className="brand-image">
+                <img src={CELEBRE125x125} alt="CELEBRE125x125" className='image-brand' />
+                </div>
+                <div className="brand-image">
+                <img src={dawn125x125} alt="dawn125x125" className='image-brand' />
+                </div>
+                <div className="brand-image">
+                <img src={delta} alt="delta" className='image-brand' />
+                </div>
+                <div className="brand-image">
+                <img src={DIRA125x125} alt="DIRA125x125" className='image-brand' />
+                </div>
+                <div className="brand-image">
+                <img src={ELLEVIRE125x125} alt="ELLEVIRE125x125" className='image-brand' />
+                </div>
+                <div className="brand-image">
+                <img src={ELLEVIRE125x125} alt="ELLEVIRE125x125" className='image-brand' />
+                </div>
+                <div className="brand-image">
+                <img src={DIRA125x125} alt="DIRA125x125" className='image-brand' />
+                </div>
+            </Slider>
+            </div>
     </div>
 
     <ul className="our-policy">
@@ -284,8 +333,8 @@ const Home = ()=>(
     <Footer />
     
 </div>
-</>
+</>)
     
-)
+}
 
 export default Home
