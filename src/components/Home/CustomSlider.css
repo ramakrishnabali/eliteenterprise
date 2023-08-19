@@ -1,0 +1,6 @@
+/* CustomSlider.css */
+.custom-slick-prev,
+.custom-slick-next {
+  font-size: 44px; /* Adjust the font size as needed */
+  color: #ff0000; /* Adjust the color as needed */
+}

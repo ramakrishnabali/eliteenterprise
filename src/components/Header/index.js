@@ -1,12 +1,16 @@
-
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 
 import { BsSearch } from "react-icons/bs";
 import { BsCart3 } from "react-icons/bs";
+import cartContext from "../../cartContext";
 
 import "./index.css"
 
-const Header = ()=>(
+const Header = ()=>{
+
+  const {number} = useContext(cartContext)
+  return(
   <>
     <div className="header-container"> 
       <h1 className="header-heading">Elite Enterprise</h1> 
@@ -17,12 +21,12 @@ const Header = ()=>(
         <Link to="/about"  className="header-links">
             <p>About</p>
         </Link>
-        <div class="dropdown">
+        <div className="dropdown">
           <p className="dropdown-toggle header-links" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           Pages
           </p>
 
-          <ul class="dropdown-menu drop">
+          <ul className="dropdown-menu drop">
           <Link to="/team"  className="dropdown-item header-sub-links">
                   <li>
                     Team
@@ -50,20 +54,19 @@ const Header = ()=>(
             <div className="header-cart-icon-container">
                 <BsCart3 className="cart-icon"/>
             </div>
-            <h1 className="header-links">Cart (0)</h1>
+            <h1 className="header-links">Cart({number})</h1>
         </div>
       </div> 
     </div> 
 
-
     <div className="header-container-small">
 
-        <div class="dropdown">
+        <div className="dropdown">
           <p className="dropdown-toggle header-links" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           Pages
           </p>
 
-          <ul class="dropdown-menu drop">
+          <ul className="dropdown-menu drop">
               <Link to="/"  className="dropdown-item header-sub-links">
                   <li>
                     Home
@@ -109,11 +112,11 @@ const Header = ()=>(
                   <div className="header-cart-icon-container">
                       <BsCart3 className="cart-icon"/>
                   </div>
-                  <h1 className="header-links">(0)</h1>
+                  <h1 className="header-links">({number})</h1>
               </div>
         </div>
     </div>
-</>
-)
+</>)
+}
 
 export default Header

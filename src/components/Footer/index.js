@@ -9,7 +9,7 @@ import whatsapp from "../../img/Home/whatsapp.png"
 const Footer = ()=>(
     <>
     <div className="footer-container">
-    <a href="https://www.whatsapp.com" target="_blank" rel="noopener noreferrer"><img className="whats-app" src={whatsapp} alt="whatsapp" /></a>
+    {/* <a href="https://www.whatsapp.com" target="_blank" rel="noopener noreferrer"><img className="whats-app" src={whatsapp} alt="whatsapp" /></a> */}
         <div className="contact-us-container">
             <h1  className="policy-heading-footer">Contact Us</h1>
             <label className="label-email" htmlFor="email">Email</label>

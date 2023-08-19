@@ -1,3 +1,4 @@
+import { useState } from "react"
 import {BrowserRouter,Routes,Route} from "react-router-dom"
 
 
@@ -10,6 +11,7 @@ import Blog from "./components/Blog"
 import SpecificBlog from "./components/SpecificBlog"
 import ContactUs from "./components/ContactUs"
 import NotFound from "./components/NotFound"
+import cartContext from "./cartContext"
 import "./App.css"
 
 
@@ -17,8 +19,17 @@ import "./App.css"
 
 
 
-const App = ()=>(
-  <BrowserRouter>
+const App = ()=>{
+  const [number,setNumber] = useState(0)
+
+  const addToCart = ()=>{
+    setNumber(number +1)
+    console.log(number)
+  }
+
+  return(
+    <BrowserRouter>
+  <cartContext.Provider value={{number,addToCart}}>
     <Routes>
       <Route exact path="/" element={<Home/>} />
       <Route exact path="/about" element={<About />} />
@@ -31,8 +42,9 @@ const App = ()=>(
       <Route exact path="/not-found" element={<NotFound />} />
       {/* <Route element={<Navigate replace to="/not-found" />} /> */}
     </Routes>
-  </BrowserRouter>
+    </cartContext.Provider>
+  </BrowserRouter>)
   
-)
+}
 
 export default App;
