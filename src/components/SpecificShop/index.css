@@ -4,18 +4,23 @@
     flex-direction: column;
     align-items: center;
     padding-top: 20px;
+    height: 100%;
+    /* border: 3px solid black; */
 }
 
 .releated-heading{
     text-align: center;
-    font-family: Roboto;
+    font-family: "Roboto";
     font-size: 50px;
     font-weight: 800;
-    line-height: 59px;
     letter-spacing: 0em;
     text-align: center;
     color: #274C5B;
-    margin-top: 75px;
+}
+.rk-container{
+    margin-top: 30px;
+    /* border: 3px solid black; */
+    padding: 0px;
 }
 .single-shop-container{
     display: flex;
@@ -23,15 +28,36 @@
     justify-content: space-around;
     max-width: 100%;
 }
-.single-shop-sub-container{
+@media (max-width:576px) {
+    .single-shop-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.featured-products-container-single{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0px;
+    padding-top: 0px;
+    width: 100%;
+    margin-top: 0px;
+}.single-shop-sub-container{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: 658px;
-    height:344px;
     top: 904px;
     left: 942px;
     /* gap: 10px; */
+}
+@media (max-width:576px) {
+    .single-shop-sub-container{
+        align-items:flex-start;
+        width: 100%;
+    }
 }
 .caramel-heading{
     margin: 0px;
@@ -65,12 +91,17 @@
     justify-content: space-between;
     margin-top: 10px;
 }
+@media (max-width:576px) {
+    .quantity-container{
+        width: 100%;
+        justify-content: space-between;
+    }
+}
 .product-desc-container{
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 1050px;
-    height:551px;
     gap: 17px;
     align-self: center;
     padding: 30px;
@@ -95,6 +126,12 @@
     border: none;
     cursor: pointer;
     margin-right: 10px;
+}
+@media (max-width:576px) {
+    .product-description-button{
+        margin-bottom: 15px;
+        
+    }
 }
 .additional-info-button{
     width:263px;

@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom"
+import {v4} from "uuid"
+
 import Slider from 'react-slick'
 
 import 'slick-carousel/slick/slick.css'
@@ -24,7 +27,7 @@ import securedPayments from "../../img/Home/securedPayments.png"
 import support from "../../img/Home/support.png"
 
 
-
+const shopList = [1,2,3,4]
 
 const Home = ()=>{
     const settings = {
@@ -91,182 +94,133 @@ const Home = ()=>{
     </div>
     <h1 className="featured-products-heading">Featured Products</h1>
     <ul className="featured-products-container">
-        <li className="featured-product">
-            <p className="sale">Sale</p>
-            <img src={ElleVireExcellenceWhippingCream2} alt="ElleVireExcellenceWhippingCream2" className="sale1" />
-            <h1 className="featured-product-heading">Caramel Crunchies Z6579</h1>
-            <hr className="hr-line"/>
-            <div className="cost-container">
-                <p className="featured-product-cost">425.00 <span className="updated-cost">525.00</span></p>
-                <button type="button" className="add-to-cart">Add to Cart</button>
-            </div>
-        </li>
-
-        <li className="featured-product">    
-            <img className="sale2" src={ElleVireExcellenceWhippingCream2} alt="ElleVireExcellenceWhippingCream2"  />
-            <h1 className="featured-product-heading">Caramel Crunchies Z6579</h1>
-            <hr className="hr-line"/>
-            <div className="cost-container">
-                <p className="featured-product-cost">425.00 <span className="updated-cost">525.00</span></p>
-                <button type="button" className="add-to-cart">Add to Cart</button>
-            </div>
-        </li>
-
-        <li className="featured-product">
-            <p className="sale">Sale</p>
-            <img src={ElleVireExcellenceWhippingCream2} alt="ElleVireExcellenceWhippingCream2" className="sale1" />
-            <h1 className="featured-product-heading">Caramel Crunchies Z6579</h1>
-            <hr className="hr-line"/>
-            <div className="cost-container">
-                <p className="featured-product-cost">425.00 <span className="updated-cost">525.00</span></p>
-                <button type="button" className="add-to-cart">Add to Cart</button>
-            </div>
-        </li>
-
-        <li className="featured-product">
-            <img className="sale2" src={ElleVireExcellenceWhippingCream2} alt="ElleVireExcellenceWhippingCream2" />
-            <h1 className="featured-product-heading">Caramel Crunchies Z6579</h1>
-            <hr className="hr-line"/>
-            <div className="cost-container">
-                <p className="featured-product-cost">425.00 <span className="updated-cost">525.00</span></p>
-                <button type="button" className="add-to-cart">Add to Cart</button>
-            </div>
-        </li>
+            {shopList.map(each =>{
+                const id = v4()
+                return(
+                    (each %2 === 0)?
+                    (<Link to={`/shop/${id}`}  className="featured-product">
+                        <li>
+                            <p className="sale">Sale</p>
+                            <img src={ElleVireExcellenceWhippingCream2} alt="ElleVireExcellenceWhippingCream2"/>
+                            <h1 className="featured-product-heading">Caramel Crunchies Z6579</h1>
+                            <hr className="hr-line"/>
+                            <div className="cost-container">
+                                <p className="featured-product-cost">425.00 <span className="updated-cost">525.00</span></p>
+                                <button type="button" className="add-to-cart">Add to Cart</button>
+                            </div>
+                        </li>
+                    </Link>):
+                    <Link to={`/shop/${id}`}  className="featured-product">
+                        <li>    
+                            <img className="sale2" src={ElleVireExcellenceWhippingCream2} alt="ElleVireExcellenceWhippingCream2" />
+                            <h1 className="featured-product-heading">Caramel Crunchies Z6579</h1>
+                            <hr className="hr-line"/>
+                            <div className="cost-container">
+                                <p className="featured-product-cost">425.00 <span className="updated-cost">525.00</span></p>
+                                <button type="button" className="add-to-cart">Add to Cart</button>
+                            </div>
+                        </li>
+                    </Link>
+                )
+            })}    
     </ul>
 
     <ul className="featured-products-container">
-        <li className="featured-product">
-            <p className="sale">Sale</p>
-            <img src={ElleVireExcellenceWhippingCream2} alt="ElleVireExcellenceWhippingCream2"  className="sale1" />
-            <h1 className="featured-product-heading">Caramel Crunchies Z6579</h1>
-            <hr className="hr-line"/>
-            <div className="cost-container">
-                <p className="featured-product-cost">425.00 <span className="updated-cost">525.00</span></p>
-                <button type="button" className="add-to-cart">Add to Cart</button>
-            </div>
-        </li>
-
-        <li className="featured-product">    
-            <img className="sale2" src={ElleVireExcellenceWhippingCream2} alt="ElleVireExcellenceWhippingCream2" />
-            <h1 className="featured-product-heading">Caramel Crunchies Z6579</h1>
-            <hr className="hr-line"/>
-            <div className="cost-container">
-                <p className="featured-product-cost">425.00 <span className="updated-cost">525.00</span></p>
-                <button type="button" className="add-to-cart">Add to Cart</button>
-            </div>
-        </li>
-
-        <li className="featured-product">
-            <p className="sale">Sale</p>
-            <img src={ElleVireExcellenceWhippingCream2} alt="ElleVireExcellenceWhippingCream2" className="sale1" />
-            <h1 className="featured-product-heading">Caramel Crunchies Z6579</h1>
-            <hr className="hr-line"/>
-            <div className="cost-container">
-                <p className="featured-product-cost">425.00 <span className="updated-cost">525.00</span></p>
-                <button type="button" className="add-to-cart">Add to Cart</button>
-            </div>
-        </li>
-
-        <li className="featured-product">
-            <img className="sale2" src={ElleVireExcellenceWhippingCream2} alt="ElleVireExcellenceWhippingCream2" />
-            <h1 className="featured-product-heading">Caramel Crunchies Z6579</h1>
-            <hr className="hr-line"/>
-            <div className="cost-container">
-                <p className="featured-product-cost">425.00 <span className="updated-cost">525.00</span></p>
-                <button type="button" className="add-to-cart">Add to Cart</button>
-            </div>
-        </li>
+            {shopList.map(each =>{
+                const id = v4()
+                return(
+                    (each %2 === 0)?
+                    (<Link to={`/shop/${id}`}  className="featured-product">
+                        <li>
+                            <p className="sale">Sale</p>
+                            <img src={ElleVireExcellenceWhippingCream2} alt="ElleVireExcellenceWhippingCream2"/>
+                            <h1 className="featured-product-heading">Caramel Crunchies Z6579</h1>
+                            <hr className="hr-line"/>
+                            <div className="cost-container">
+                                <p className="featured-product-cost">425.00 <span className="updated-cost">525.00</span></p>
+                                <button type="button" className="add-to-cart">Add to Cart</button>
+                            </div>
+                        </li>
+                    </Link>):
+                    <Link to={`/shop/${id}`}  className="featured-product">
+                        <li>    
+                            <img className="sale2" src={ElleVireExcellenceWhippingCream2} alt="ElleVireExcellenceWhippingCream2" />
+                            <h1 className="featured-product-heading">Caramel Crunchies Z6579</h1>
+                            <hr className="hr-line"/>
+                            <div className="cost-container">
+                                <p className="featured-product-cost">425.00 <span className="updated-cost">525.00</span></p>
+                                <button type="button" className="add-to-cart">Add to Cart</button>
+                            </div>
+                        </li>
+                    </Link>
+                )
+            })}    
     </ul>
     <button type="button" className="about-us-button load-more">Load More<span className="orange-arrow">{< HiArrowSmRight />}</span></button>
 
     <h1 className="featured-products-heading">New Arrivals</h1>
     <ul className="featured-products-container">
-        <li className="featured-product">
-            <p className="sale">Sale</p>
-            <img src={ElleVireExcellenceWhippingCream2} alt="ElleVireExcellenceWhippingCream2" className="sale1" />
-            <h1 className="featured-product-heading">Caramel Crunchies Z6579</h1>
-            <hr className="hr-line"/>
-            <div className="cost-container">
-                <p className="featured-product-cost">425.00 <span className="updated-cost">525.00</span></p>
-                <button type="button" className="add-to-cart">Add to Cart</button>
-            </div>
-        </li>
-
-        <li className="featured-product">    
-            <img className="sale2" src={ElleVireExcellenceWhippingCream2} alt="ElleVireExcellenceWhippingCream2" />
-            <h1 className="featured-product-heading">Caramel Crunchies Z6579</h1>
-            <hr className="hr-line"/>
-            <div className="cost-container">
-                <p className="featured-product-cost">425.00 <span className="updated-cost">525.00</span></p>
-                <button type="button" className="add-to-cart">Add to Cart</button>
-            </div>
-        </li>
-
-        <li className="featured-product">
-            <p className="sale">Sale</p>
-            <img src={ElleVireExcellenceWhippingCream2} alt="ElleVireExcellenceWhippingCream2"  className="sale1"/>
-            <h1 className="featured-product-heading">Caramel Crunchies Z6579</h1>
-            <hr className="hr-line"/>
-            <div className="cost-container">
-                <p className="featured-product-cost">425.00 <span className="updated-cost">525.00</span></p>
-                <button type="button" className="add-to-cart">Add to Cart</button>
-            </div>
-        </li>
-
-        <li className="featured-product">
-            <img className="sale2" src={ElleVireExcellenceWhippingCream2} alt="ElleVireExcellenceWhippingCream2" />
-            <h1 className="featured-product-heading">Caramel Crunchies Z6579</h1>
-            <hr className="hr-line"/>
-            <div className="cost-container">
-                <p className="featured-product-cost">425.00 <span className="updated-cost">525.00</span></p>
-                <button type="button" className="add-to-cart">Add to Cart</button>
-            </div>
-        </li>
+            {shopList.map(each =>{
+                const id = v4()
+                return(
+                    (each %2 === 0)?
+                    (<Link to={`/shop/${id}`}  className="featured-product">
+                        <li>
+                            <p className="sale">Sale</p>
+                            <img src={ElleVireExcellenceWhippingCream2} alt="ElleVireExcellenceWhippingCream2"/>
+                            <h1 className="featured-product-heading">Caramel Crunchies Z6579</h1>
+                            <hr className="hr-line"/>
+                            <div className="cost-container">
+                                <p className="featured-product-cost">425.00 <span className="updated-cost">525.00</span></p>
+                                <button type="button" className="add-to-cart">Add to Cart</button>
+                            </div>
+                        </li>
+                    </Link>):
+                    <Link to={`/shop/${id}`}  className="featured-product">
+                        <li>    
+                            <img className="sale2" src={ElleVireExcellenceWhippingCream2} alt="ElleVireExcellenceWhippingCream2" />
+                            <h1 className="featured-product-heading">Caramel Crunchies Z6579</h1>
+                            <hr className="hr-line"/>
+                            <div className="cost-container">
+                                <p className="featured-product-cost">425.00 <span className="updated-cost">525.00</span></p>
+                                <button type="button" className="add-to-cart">Add to Cart</button>
+                            </div>
+                        </li>
+                    </Link>
+                )
+            })}    
     </ul>
 
     <ul className="featured-products-container">
-        <li className="featured-product">
-            <p className="sale">Sale</p>
-            <img src={ElleVireExcellenceWhippingCream2} alt="ElleVireExcellenceWhippingCream2"  className="sale1" />
-            <h1 className="featured-product-heading">Caramel Crunchies Z6579</h1>
-            <hr className="hr-line"/>
-            <div className="cost-container">
-                <p className="featured-product-cost">425.00 <span className="updated-cost">525.00</span></p>
-                <button type="button" className="add-to-cart">Add to Cart</button>
-            </div>
-        </li>
-
-        <li className="featured-product">
-            
-            <img className="sale2" src={ElleVireExcellenceWhippingCream2} alt="ElleVireExcellenceWhippingCream2" />
-            <h1 className="featured-product-heading">Caramel Crunchies Z6579</h1>
-            <hr className="hr-line"/>
-            <div className="cost-container">
-                <p className="featured-product-cost">425.00 <span className="updated-cost">525.00</span></p>
-                <button type="button" className="add-to-cart">Add to Cart</button>
-            </div>
-        </li>
-
-        <li className="featured-product">
-            <p className="sale">Sale</p>
-            <img src={ElleVireExcellenceWhippingCream2} alt="ElleVireExcellenceWhippingCream2" className="sale1" />
-            <h1 className="featured-product-heading">Caramel Crunchies Z6579</h1>
-            <hr className="hr-line"/>
-            <div className="cost-container">
-                <p className="featured-product-cost">425.00 <span className="updated-cost">525.00</span></p>
-                <button type="button" className="add-to-cart">Add to Cart</button>
-            </div>
-        </li>
-
-        <li className="featured-product">
-            <img className="sale2" src={ElleVireExcellenceWhippingCream2} alt="ElleVireExcellenceWhippingCream2" />
-            <h1 className="featured-product-heading">Caramel Crunchies Z6579</h1>
-            <hr className="hr-line"/>
-            <div className="cost-container">
-                <p className="featured-product-cost">425.00 <span className="updated-cost">525.00</span></p>
-                <button type="button" className="add-to-cart">Add to Cart</button>
-            </div>
-        </li>
+            {shopList.map(each =>{
+                const id = v4()
+                return(
+                    (each %2 === 0)?
+                    (<Link to={`/shop/${id}`}  className="featured-product">
+                        <li>
+                            <p className="sale">Sale</p>
+                            <img src={ElleVireExcellenceWhippingCream2} alt="ElleVireExcellenceWhippingCream2"/>
+                            <h1 className="featured-product-heading">Caramel Crunchies Z6579</h1>
+                            <hr className="hr-line"/>
+                            <div className="cost-container">
+                                <p className="featured-product-cost">425.00 <span className="updated-cost">525.00</span></p>
+                                <button type="button" className="add-to-cart">Add to Cart</button>
+                            </div>
+                        </li>
+                    </Link>):
+                    <Link to={`/shop/${id}`}  className="featured-product">
+                        <li>    
+                            <img className="sale2" src={ElleVireExcellenceWhippingCream2} alt="ElleVireExcellenceWhippingCream2" />
+                            <h1 className="featured-product-heading">Caramel Crunchies Z6579</h1>
+                            <hr className="hr-line"/>
+                            <div className="cost-container">
+                                <p className="featured-product-cost">425.00 <span className="updated-cost">525.00</span></p>
+                                <button type="button" className="add-to-cart">Add to Cart</button>
+                            </div>
+                        </li>
+                    </Link>
+                )
+            })}    
     </ul>
     <button type="button" className="about-us-button load-more">Load More<span className="orange-arrow">{< HiArrowSmRight />}</span></button>
     <div className="brand-partner-container">

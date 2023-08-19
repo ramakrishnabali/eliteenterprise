@@ -23,7 +23,7 @@ const App = ()=>(
       <Route exact path="/" element={<Home/>} />
       <Route exact path="/about" element={<About />} />
       <Route exact path="/shop" element={<Shop />} />
-      <Route exact path="/shop/:1" element={<SpecificShop />} />
+      <Route exact path="/shop/:id" element={<SpecificShop />} />
       <Route exact path="/team" element={<Team />} />
       <Route exact path="/blog" element={<Blog />} />
       <Route exact path="/blog/:1" element={<SpecificBlog />} />
