@@ -20,12 +20,24 @@
     position: relative;
     top: 10px;
 }
-
+@media (max-width:768px) {
+    .blog-main-container{
+        margin-bottom: 50px;
+    }
+    .blog-container{
+        margin-bottom: 80px;
+    }
+}
+@media (max-width:350px) {
+    .blog-container{
+        flex-wrap: wrap;
+    }
+}
 .blog{
     background-image: url(../../img/Blog/blog1.png);
     background-size: cover;
     width: 450px;
-    height: 289px;
+   height: 100%;
     border-radius: 10px;
     margin-bottom: 30px;
     margin-top: 30px;

@@ -82,7 +82,7 @@
     /* padding: 13px; */
 }
 .group{
-    width: 50%;
+    width: 70%;
 }
 @media (max-width:576px) {
     .group{
@@ -91,7 +91,7 @@
 }
 .about-us-container{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     height: 100%;
     align-self: center;
 }
@@ -103,7 +103,7 @@
     }
 }
 .chocolate-image{
-    height: 200px;
+    height: 350px;
     margin: 0px;
 }
 .about-container{
@@ -134,7 +134,16 @@
     font-weight: 400;
     font-size: 18px;
     color: #525C60;
-    text-align: center;
+    text-align: flex-start;
+}
+@media (max-width:576px) {
+    .creative-paragraph-about{
+        font-family: "Open Sans";
+        font-weight: 400;
+        font-size: 18px;
+        color: #525C60;
+        text-align: center;
+    }
 }
 .organic-food-heading{
     color: #7E1717;
