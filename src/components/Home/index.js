@@ -112,7 +112,7 @@ const Home = ()=>{
                     return(
                         (each %2 === 0)?
                         (
-                            <li className="advanched-list">
+                            <li className="advanched-list" key={id}>
                                 <Link to={`/shop/${id}`}  className="featured-product">
                                     <p className="sale">Sale</p>
                                     <img src={ElleVireExcellenceWhippingCream2} alt="ElleVireExcellenceWhippingCream2"/>
@@ -126,7 +126,7 @@ const Home = ()=>{
                             </li>
                         ):
                         (
-                            <li className="advanched-list">
+                            <li className="advanched-list"  key={id}>
                                 <Link to={`/shop/${id}`}  className="featured-product">   
                                     <img className="sale2" src={ElleVireExcellenceWhippingCream2} alt="ElleVireExcellenceWhippingCream2" />
                                     <h1 className="featured-product-heading">Caramel Crunchies Z6579</h1>
@@ -148,7 +148,7 @@ const Home = ()=>{
                     return(
                         (each %2 === 0)?
                         (
-                            <li className="advanched-list">
+                            <li className="advanched-list"  key={id}>
                                 <Link to={`/shop/${id}`}  className="featured-product">
                                     <p className="sale">Sale</p>
                                     <img src={ElleVireExcellenceWhippingCream2} alt="ElleVireExcellenceWhippingCream2"/>
@@ -162,7 +162,7 @@ const Home = ()=>{
                             </li>
                         ):
                         (
-                            <li className="advanched-list">
+                            <li className="advanched-list"  key={id}>
                                 <Link to={`/shop/${id}`}  className="featured-product">   
                                     <img className="sale2" src={ElleVireExcellenceWhippingCream2} alt="ElleVireExcellenceWhippingCream2" />
                                     <h1 className="featured-product-heading">Caramel Crunchies Z6579</h1>
@@ -188,7 +188,7 @@ const Home = ()=>{
                     return(
                         (each %2 === 0)?
                         (
-                            <li className="advanched-list">
+                            <li className="advanched-list"  key={id}>
                                 <Link to={`/shop/${id}`}  className="featured-product">
                                     <p className="sale">Sale</p>
                                     <img src={ElleVireExcellenceWhippingCream2} alt="ElleVireExcellenceWhippingCream2"/>
@@ -202,7 +202,7 @@ const Home = ()=>{
                             </li>
                         ):
                         (
-                            <li className="advanched-list">
+                            <li className="advanched-list"  key={id}>
                                 <Link to={`/shop/${id}`}  className="featured-product">   
                                     <img className="sale2" src={ElleVireExcellenceWhippingCream2} alt="ElleVireExcellenceWhippingCream2" />
                                     <h1 className="featured-product-heading">Caramel Crunchies Z6579</h1>
@@ -224,7 +224,7 @@ const Home = ()=>{
                     return(
                         (each %2 === 0)?
                         (
-                            <li className="advanched-list">
+                            <li className="advanched-list"  key={id}>
                                 <Link to={`/shop/${id}`}  className="featured-product">
                                     <p className="sale">Sale</p>
                                     <img src={ElleVireExcellenceWhippingCream2} alt="ElleVireExcellenceWhippingCream2"/>
@@ -238,7 +238,7 @@ const Home = ()=>{
                             </li>
                         ):
                         (
-                            <li className="advanched-list">
+                            <li className="advanched-list"  key={id}>
                                 <Link to={`/shop/${id}`}  className="featured-product">   
                                     <img className="sale2" src={ElleVireExcellenceWhippingCream2} alt="ElleVireExcellenceWhippingCream2" />
                                     <h1 className="featured-product-heading">Caramel Crunchies Z6579</h1>
