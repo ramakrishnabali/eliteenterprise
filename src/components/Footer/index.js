@@ -4,7 +4,7 @@ import fb from "../../img/Home/fb.png"
 import instagram from "../../img/Home/instagram.png"
 import twitter from "../../img/Home/twitter.png"
 import vector from "../../img/Home/vector.png"
-import whatsapp from "../../img/Home/whatsapp.png"
+// import whatsapp from "../../img/Home/whatsapp.png"
 
 const Footer = ()=>(
     <>
