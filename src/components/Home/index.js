@@ -1,5 +1,5 @@
-import { useContext } from "react";
-import { Link } from "react-router-dom"
+import { useContext,useState } from "react";
+import { Link,useNavigate } from "react-router-dom"
 import {v4} from "uuid"
 
 
@@ -34,7 +34,9 @@ import cartContext from "../../cartContext";
 const shopList = [1,2,3,4]
 
 const Home = ()=>{
+    const navigate = useNavigate()
     const {addToCart} = useContext(cartContext)
+    const [buttonStatus,setButton] = useState({one:true,two:true})
       
     //   const CustomNextArrow = (props) => {
     //     return <div className="custom-slick-next" onClick={props.onClick} />;
@@ -79,7 +81,7 @@ const Home = ()=>{
             Things for Success</h1>
             <p className="creative-paragraph">Simply dummy text of the printing and typesetting industry.
             Lorem had ceased <br /> to been the industry's standard.</p>
-            <button type="button" className="shop-now-button"> Shop Now</button>
+            <button type="button" onClick={()=>{navigate("/shop")}} className="shop-now-button"> Shop Now</button>
         </div>
         <img className="right-arrow" src={RightArrow} alt="right-arrow" />
     </div>
@@ -98,7 +100,7 @@ const Home = ()=>{
             <h5 className="organic-food-heading">Organic Foods Only</h5>
             <p className="creative-paragraph-about">Simply dummy text of the printing and typesetting industry.
             Lorem had ceased</p>
-            <button type="button" className="about-us-button">Shop Now<span className="orange-arrow">{< HiArrowSmRight />}</span></button>
+            <button type="button" onClick={()=>{navigate("/shop")}} className="about-us-button">Shop Now<span className="orange-arrow">{< HiArrowSmRight />}</span></button>
         </div>
     </div>
     <div className="our-products-container">
@@ -177,8 +179,46 @@ const Home = ()=>{
                     
                 })}    
         </ul>
+        {!buttonStatus.one && (
+            <ul className="featured-products-container">
+            {shopList.map(each =>{
+                const id = v4()
+                return(
+                    (each %2 === 0)?
+                    (
+                        <li className="advanched-list"  key={id}>
+                            <Link to={`/shop/${id}`}  className="featured-product">
+                                <p className="sale">Sale</p>
+                                <img src={ElleVireExcellenceWhippingCream2} alt="ElleVireExcellenceWhippingCream2"/>
+                                <h1 className="featured-product-heading">Caramel Crunchies Z6579</h1>
+                                <hr className="hr-line"/>
+                            </Link>
+                            <div className="cost-container">
+                                <p className="featured-product-cost">425.00 <span className="updated-cost">525.00</span></p>
+                                <button type="button" onClick={()=>{addToCart()}} className="add-to-cart">Add to Cart</button>
+                            </div>
+                        </li>
+                    ):
+                    (
+                        <li className="advanched-list"  key={id}>
+                            <Link to={`/shop/${id}`}  className="featured-product">   
+                                <img className="sale2" src={ElleVireExcellenceWhippingCream2} alt="ElleVireExcellenceWhippingCream2" />
+                                <h1 className="featured-product-heading">Caramel Crunchies Z6579</h1>
+                                <hr className="hr-line"/>
+                            </Link>
+                            <div className="cost-container">
+                                <p className="featured-product-cost">425.00 <span className="updated-cost">525.00</span></p>
+                                <button type="button" onClick={()=>{addToCart()}} className="add-to-cart">Add to Cart</button>
+                            </div>
+                        </li>
+                   ))
+                
+            })}    
+            </ul>
+        )}
     </div>
-    <button type="button" className="about-us-button load-more">Load More<span className="orange-arrow">{< HiArrowSmRight />}</span></button>
+    {buttonStatus.one && <button type="button" onClick={()=>{setButton(prevState=>({...prevState,one:!prevState.one}))}} className="about-us-button load-more">Load More<span className="orange-arrow">{< HiArrowSmRight />}</span></button>}
+    {!buttonStatus.one && <button type="button" onClick={()=>{setButton(prevState=>({...prevState,one:!prevState.one}))}} className="about-us-button load-more">Load Less<span className="orange-arrow">{< HiArrowSmRight />}</span></button>}
     
     <div className="advanced-container">            
         <h1 className="featured-products-heading">New Arrivals</h1>
@@ -253,8 +293,47 @@ const Home = ()=>{
                     
                 })}    
         </ul>
+
+        {!buttonStatus.two && (
+            <ul className="featured-products-container">
+            {shopList.map(each =>{
+                const id = v4()
+                return(
+                    (each %2 === 0)?
+                    (
+                        <li className="advanched-list"  key={id}>
+                            <Link to={`/shop/${id}`}  className="featured-product">
+                                <p className="sale">Sale</p>
+                                <img src={ElleVireExcellenceWhippingCream2} alt="ElleVireExcellenceWhippingCream2"/>
+                                <h1 className="featured-product-heading">Caramel Crunchies Z6579</h1>
+                                <hr className="hr-line"/>
+                            </Link>
+                            <div className="cost-container">
+                                <p className="featured-product-cost">425.00 <span className="updated-cost">525.00</span></p>
+                                <button type="button" onClick={()=>{addToCart()}} className="add-to-cart">Add to Cart</button>
+                            </div>
+                        </li>
+                    ):
+                    (
+                        <li className="advanched-list"  key={id}>
+                            <Link to={`/shop/${id}`}  className="featured-product">   
+                                <img className="sale2" src={ElleVireExcellenceWhippingCream2} alt="ElleVireExcellenceWhippingCream2" />
+                                <h1 className="featured-product-heading">Caramel Crunchies Z6579</h1>
+                                <hr className="hr-line"/>
+                            </Link>
+                            <div className="cost-container">
+                                <p className="featured-product-cost">425.00 <span className="updated-cost">525.00</span></p>
+                                <button type="button" onClick={()=>{addToCart()}} className="add-to-cart">Add to Cart</button>
+                            </div>
+                        </li>
+                   ))
+                
+            })}    
+            </ul>
+        )}
     </div> 
-    <button type="button" className="about-us-button load-more">Load More<span className="orange-arrow">{< HiArrowSmRight />}</span></button>
+    {buttonStatus.two && <button type="button" onClick={()=>{setButton(prevState=>({...prevState,two:!prevState.two}))}} className="about-us-button load-more">Load More<span className="orange-arrow">{< HiArrowSmRight />}</span></button>}
+    {!buttonStatus.two && <button type="button" onClick={()=>{setButton(prevState=>({...prevState,two:!prevState.two}))}} className="about-us-button load-more">Load Less<span className="orange-arrow">{< HiArrowSmRight />}</span></button>}
     <div className="brand-partner-container">
         <div>
             <h3>Brands</h3>

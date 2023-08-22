@@ -40,7 +40,7 @@ const SpecificShop = ()=>{
                             <h3 className="quantity">Quantity: 1</h3>
                             <h3 className="quantity">Size: Kg</h3>
                         </div>
-                        <button type="button" className="about-us-button load-more">Add To Cart<span className="orange-arrow">{< HiArrowSmRight />}</span></button>
+                        <button type="button" onClick={()=>{addToCart()}} className="about-us-button load-more">Add To Cart<span className="orange-arrow">{< HiArrowSmRight />}</span></button>
                     </div>
                 </div>
             </div>
