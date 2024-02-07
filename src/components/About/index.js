@@ -80,7 +80,7 @@ const About = ()=>{
                 when an unknown printer took a galley.Simply dummy text of the printing and typesetting industry.</p>
                 <div className="circle-container">
                     <img src={circle} alt="circle" />
-                    <p className="circle-desc">100% Natural Product</p>
+                    <p className="circle-desc">100% Natural</p>
                 </div>
                 <p className="why-choose-us-paragraph desc">Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s</p>
                 <div className="circle-container">
