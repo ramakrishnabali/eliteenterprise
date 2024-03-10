@@ -77,7 +77,7 @@ const Home = ()=>{
     <div className="top-container">
         <img className="left-arrow" src={LeftArrow} alt="left-arrow" />
         <div className="creative-heading-container">
-            <h1 className="creative-heading">We do Creative <br /> 
+            <h1 className="creative-heading">DAMUROTU TEJASWINI <br /> 
             Things for Success</h1>
             <p className="creative-paragraph">Simply dummy text of the printing and typesetting industry.
             Lorem had ceased <br /> to been the industry's standard.</p>
